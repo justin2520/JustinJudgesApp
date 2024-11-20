@@ -9,34 +9,30 @@ import UIKit
 
 class ReviewViewController: UIViewController {
     
-    @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
-    
-    @IBOutlet weak var textViewOutlet: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-//        iHateSwiftOutlet.text = AppData.sortedName[AppData.index]
+        //        iHateSwiftOutlet.text = AppData.sortedName[AppData.index]
         
-        if AppData.sortedReview[AppData.index].rawValue != 0{
-            for i in 0...AppData.sortedReview[AppData.index].rawValue - 1{
-                segmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
-            }
-        }
+        //        if AppData.sortedReview[AppData.index].rawValue != 0{
+        //            for i in 0...AppData.sortedReview[AppData.index].rawValue - 1{
+        //                segmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
+        //            }
+        //        }
+        //
+        //        textViewOutlet.text = AppData.sortedDescription[AppData.index]
+        //    }
         
-        textViewOutlet.text = AppData.sortedDescription[AppData.index]
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -106,11 +106,11 @@
             <objects>
                 <viewController id="l4V-Bg-MIB" customClass="ReviewsViewController" customModule="JustinJudgesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="81d-of-5TE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TNs-z3-c19">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="abp-z5-Xgx">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="680.66666666666663"/>
@@ -151,7 +151,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-Ma-Bsi">
-                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="161.33333333333337"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Review"/>
                                         <connections>
@@ -186,11 +186,11 @@
             <objects>
                 <viewController id="FAb-Vq-ONs" customClass="ReviewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y6A-YR-Hdc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-4F-Vxt">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nup-Iq-RSI">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
@@ -199,7 +199,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-Lw-AS2">
-                                        <rect key="frame" x="0.0" y="20.333333333333314" width="393" height="567.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="393" height="694.66666666666674"/>
                                         <segments>
                                             <segment title="" image="star" catalog="system"/>
                                             <segment title="" image="star" catalog="system"/>
@@ -209,7 +209,7 @@
                                         </segments>
                                     </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-nA-h4q">
-                                        <rect key="frame" x="0.0" y="587" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="714" width="393" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -228,10 +228,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oCX-UI-cPb"/>
-                    <connections>
-                        <outlet property="segmentedControlOutlet" destination="2Ir-Lw-AS2" id="JpA-my-8vO"/>
-                        <outlet property="textViewOutlet" destination="UA4-nA-h4q" id="erO-rY-uS1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMO-Ai-orA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,19 +238,19 @@
             <objects>
                 <viewController id="FWs-W0-DhT" customClass="AddReviewViewController" customModule="JustinJudgesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bEr-w7-Khl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-pQ-GoM">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-Il-kgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="521.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="648.66666666666663"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ifk-zP-lg1">
-                                        <rect key="frame" x="0.0" y="521.66666666666663" width="393" height="32"/>
+                                        <rect key="frame" x="0.0" y="648.66666666666663" width="393" height="32"/>
                                         <segments>
                                             <segment title="Zero"/>
                                             <segment title="One"/>
@@ -265,14 +261,14 @@
                                         </segments>
                                     </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t2t-De-CEn">
-                                        <rect key="frame" x="0.0" y="552.66666666666663" width="393" height="128"/>
+                                        <rect key="frame" x="0.0" y="679.66666666666663" width="393" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvJ-gl-hbP">
-                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="807.66666666666663" width="393" height="34.333333333333371"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                         <connections>
@@ -323,7 +319,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lc5-Qw-A7s"/>
+        <segue reference="3l0-A4-klq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
