@@ -9,6 +9,10 @@ import UIKit
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    override func viewWillAppear(_ animated: Bool) {
+        ratingsTableViewOutlet.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
         

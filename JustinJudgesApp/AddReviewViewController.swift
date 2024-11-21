@@ -27,6 +27,9 @@ class AddReviewViewController: UIViewController {
             AppData.sortedName = []
             AppData.sortedReview = []
             AppData.sortedDescription = []
+        
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     /*

@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1920" y="4"/>
         </scene>
-        <!--Reviews View Controller-->
+        <!--reviews-->
         <scene sceneID="gvj-4r-Cl5">
             <objects>
-                <viewController id="l4V-Bg-MIB" customClass="ReviewsViewController" customModule="JustinJudgesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="reviews" id="l4V-Bg-MIB" customClass="ReviewsViewController" customModule="JustinJudgesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="81d-of-5TE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,8 +123,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-5t-br9">
-                                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-5t-br9">
+                                                            <rect key="frame" x="20" y="11" width="214" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -156,7 +156,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Add Review"/>
                                         <connections>
                                             <action selector="addReviewButtonAction:" destination="l4V-Bg-MIB" eventType="touchUpInside" id="POa-mg-CbL"/>
-                                            <segue destination="FWs-W0-DhT" kind="show" id="vUW-wH-H2E"/>
+                                            <segue destination="FWs-W0-DhT" kind="show" identifier="toReview" id="vUW-wH-H2E"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZZ-ub-O3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="4"/>
+            <point key="canvasLocation" x="2843.5114503816794" y="3.5211267605633805"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="4CL-SC-aTj">
@@ -228,6 +228,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oCX-UI-cPb"/>
+                    <connections>
+                        <outlet property="iHateSwiftOutlet" destination="nup-Iq-RSI" id="laP-m7-iAp"/>
+                        <outlet property="segmentedControlOutlet" destination="2Ir-Lw-AS2" id="T3Y-wZ-1om"/>
+                        <outlet property="textViewOutlet" destination="UA4-nA-h4q" id="6v2-XO-IdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMO-Ai-orA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,7 +278,6 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                         <connections>
                                             <action selector="submitButtonAction:" destination="FWs-W0-DhT" eventType="touchUpInside" id="PHh-hE-obL"/>
-                                            <segue destination="l4V-Bg-MIB" kind="show" id="3l0-A4-klq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -318,9 +322,6 @@
             <point key="canvasLocation" x="29.770992366412212" y="3.5211267605633805"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Lc5-Qw-A7s"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
