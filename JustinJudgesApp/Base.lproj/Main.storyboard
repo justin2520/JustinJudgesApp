@@ -250,30 +250,23 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-Il-kgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="490.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="521.66666666666663"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ifk-zP-lg1">
-                                        <rect key="frame" x="0.0" y="490.66666666666663" width="393" height="32"/>
-                                        <segments>
-                                            <segment title="" image="star" catalog="system"/>
-                                            <segment title="" image="star" catalog="system"/>
-                                            <segment title="" image="star" catalog="system"/>
-                                            <segment title="" image="star" catalog="system"/>
-                                            <segment title="" image="star" catalog="system"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-x9-rF6">
                                         <rect key="frame" x="0.0" y="521.66666666666663" width="393" height="32"/>
                                         <segments>
-                                            <segment title="Zero"/>
-                                            <segment title="One"/>
-                                            <segment title="Two"/>
-                                            <segment title="Three"/>
-                                            <segment title="Four"/>
-                                            <segment title="Five"/>
+                                            <segment title="Zero &gt;:("/>
+                                            <segment title="" image="star" catalog="system"/>
+                                            <segment title="" image="star" catalog="system"/>
+                                            <segment title="" image="star" catalog="system"/>
+                                            <segment title="" image="star" catalog="system"/>
+                                            <segment title="" image="star" catalog="system"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="valueChanged:" destination="FWs-W0-DhT" eventType="valueChanged" id="RxV-ci-EcA"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t2t-De-CEn">
                                         <rect key="frame" x="0.0" y="552.66666666666663" width="393" height="128"/>

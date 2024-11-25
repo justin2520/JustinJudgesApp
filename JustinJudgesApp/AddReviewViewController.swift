@@ -15,6 +15,8 @@ class AddReviewViewController: UIViewController {
     
     @IBOutlet weak var descriptionTextViewOutlet: UITextView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,18 @@ class AddReviewViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
+    
+
+    @IBAction func valueChanged(_ sender: UISegmentedControl) {
+        if ratingSegmentedControlOutlet.selectedSegmentIndex > 0 {
+            for i in  1 ... ratingSegmentedControlOutlet.selectedSegmentIndex{
+                ratingSegmentedControlOutlet.setImage("star", forSegmentAt: i)
+        }
+       
+            
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
