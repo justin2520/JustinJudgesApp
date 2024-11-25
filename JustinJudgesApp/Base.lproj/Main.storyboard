@@ -261,7 +261,7 @@
                                             <segment title="" image="star" catalog="system"/>
                                             <segment title="" image="star" catalog="system"/>
                                             <segment title="" image="star" catalog="system"/>
-                                            <segment title="Four"/>
+                                            <segment title="" image="star" catalog="system"/>
                                         </segments>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-x9-rF6">
