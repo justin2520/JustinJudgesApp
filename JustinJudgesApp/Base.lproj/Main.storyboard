@@ -259,8 +259,8 @@
                                         <segments>
                                             <segment title="" image="star" catalog="system"/>
                                             <segment title="" image="star" catalog="system"/>
-                                            <segment title="Two"/>
-                                            <segment title="Three"/>
+                                            <segment title="" image="star" catalog="system"/>
+                                            <segment title="" image="star" catalog="system"/>
                                             <segment title="Four"/>
                                         </segments>
                                     </segmentedControl>
