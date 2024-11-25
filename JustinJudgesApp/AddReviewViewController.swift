@@ -37,8 +37,14 @@ class AddReviewViewController: UIViewController {
 
     @IBAction func valueChanged(_ sender: UISegmentedControl) {
         if ratingSegmentedControlOutlet.selectedSegmentIndex > 0 {
+            
             for i in  1 ... ratingSegmentedControlOutlet.selectedSegmentIndex{
-                ratingSegmentedControlOutlet.setImage("star", forSegmentAt: i)
+                if ratingSegmentedControlOutlet.imageForSegment(at: i) == UIImage(systemName: "star.fill"){
+                    ratingSegmentedControlOutlet.setImage(UIImage(systemName:  "star"), forSegmentAt: i)
+                }else{
+                    ratingSegmentedControlOutlet.setImage(UIImage(systemName:  "star.fill"), forSegmentAt: i)
+                }
+                
         }
        
             
