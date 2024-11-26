@@ -17,28 +17,28 @@ class Reviews{
     var description: String
     var rating: Rating
     
-    init(type: String, name: String, description: String, rating: String) {
+    init(type: String, name: String, description: String, rating: Int) {
         self.type = type
         self.name = name
         self.description = description
         
         switch(rating){
-        case "Zero":
+        case 0:
             self.rating = .Zero
             
-        case "One":
+        case 1:
             self.rating = .One
             
-        case "Two":
+        case 2:
             self.rating = .Two
             
-        case "Three":
+        case 3:
             self.rating = .Three
             
-        case "Four":
+        case 4:
             self.rating = .Four
             
-        case "Five":
+        case 5:
             self.rating = .Five
             
         default:

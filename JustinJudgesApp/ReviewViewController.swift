@@ -9,12 +9,8 @@ import UIKit
 
 class ReviewViewController: UIViewController {
     
-    @IBOutlet weak var iHateSwiftOutlet: UILabel!
     
-    @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
-    
-    @IBOutlet weak var textViewOutlet: UITextView!
-    
+    @IBOutlet weak var labelOutlet: UILabel!
     
     
     
@@ -23,16 +19,16 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-                iHateSwiftOutlet.text = AppData.sortedName[AppData.index]
-        
-                if AppData.sortedReview[AppData.index].rawValue != 0{
-                    for i in 0...AppData.sortedReview[AppData.index].rawValue - 1{
-                        segmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
-                    }
-                }
-        
-                textViewOutlet.text = AppData.sortedDescription[AppData.index]
-            }
+        //                iHateSwiftOutlet.text = AppData.sortedName[AppData.index]
+        //
+        //                if AppData.sortedReview[AppData.index].rawValue != 0{
+        //                    for i in 0...AppData.sortedReview[AppData.index].rawValue - 1{
+        //                        segmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
+        //                    }
+        //                }
+        //
+        //                textViewOutlet.text = AppData.sortedDescription[AppData.index]
+        //            }
         
         
         /*
@@ -45,4 +41,5 @@ class ReviewViewController: UIViewController {
          }
          */
     }
+}
 

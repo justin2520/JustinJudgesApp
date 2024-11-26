@@ -24,7 +24,10 @@ class AddReviewViewController: UIViewController {
     }
     
     @IBAction func submitButtonAction(_ sender: UIButton) {
-        AppData.reviews.append(Reviews(type: AppData.category, name: nameTextFieldOutlet.text!, description: descriptionTextViewOutlet.text!, rating: ratingSegmentedControlOutlet.titleForSegment(at: ratingSegmentedControlOutlet.selectedSegmentIndex)!))
+        
+        
+        
+        AppData.reviews.append(Reviews(type: AppData.category, name: nameTextFieldOutlet.text!, description: descriptionTextViewOutlet.text!, rating: ratingSegmentedControlOutlet.selectedSegmentIndex))
         
             AppData.sortedName = []
             AppData.sortedReview = []
@@ -36,18 +39,17 @@ class AddReviewViewController: UIViewController {
     
 
     @IBAction func valueChanged(_ sender: UISegmentedControl) {
-        if ratingSegmentedControlOutlet.selectedSegmentIndex > 0 {
-            
-            for i in  1 ... ratingSegmentedControlOutlet.selectedSegmentIndex{
-                if ratingSegmentedControlOutlet.imageForSegment(at: i) == UIImage(systemName: "star.fill"){
+        let valueClicked = ratingSegmentedControlOutlet.selectedSegmentIndex
+        
+        if ratingSegmentedControlOutlet.imageForSegment(at: valueClicked) == UIImage(systemName: "star.fill") || ratingSegmentedControlOutlet.imageForSegment(at: valueClicked) == nil{
+                for i in  ratingSegmentedControlOutlet.selectedSegmentIndex + 1 ... ratingSegmentedControlOutlet.numberOfSegments - 1 {
                     ratingSegmentedControlOutlet.setImage(UIImage(systemName:  "star"), forSegmentAt: i)
-                }else{
-                    ratingSegmentedControlOutlet.setImage(UIImage(systemName:  "star.fill"), forSegmentAt: i)
                 }
+            }else if ratingSegmentedControlOutlet.imageForSegment(at: valueClicked) == UIImage(systemName: "star"){
+                for i in  1 ... ratingSegmentedControlOutlet.selectedSegmentIndex{
+                    ratingSegmentedControlOutlet.setImage(UIImage(systemName:  "star.fill"), forSegmentAt: i)
                 
         }
-       
-            
         }
     }
     

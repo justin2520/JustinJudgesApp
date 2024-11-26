@@ -49,7 +49,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.index = indexPath.row
-        performSegue(withIdentifier: "reviewSegue", sender: nil)
+        performSegue(withIdentifier: "reviewSegue", sender: self)
     }
     
     @IBOutlet weak var ratingsTableViewOutlet: UITableView!
