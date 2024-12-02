@@ -13,7 +13,14 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBAction func addCatagoryAction(_ sender: UIButton) {
-        
+        if catagoryOutlet.text != "", let newCat : String  = catagoryOutlet.text{
+            categories.append(newCat)
+            catagoryOutlet.text = ""
+            categoryTableViewOutlet.reloadData()
+            catagoryOutlet.placeholder = "Add Catagory Name..."
+        }else{
+            catagoryOutlet.placeholder = "enter something!"
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
