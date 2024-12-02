@@ -9,6 +9,12 @@ import UIKit
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var catagoryOutlet: UITextField!
+    
+    
+    @IBAction func addCatagoryAction(_ sender: UIButton) {
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }

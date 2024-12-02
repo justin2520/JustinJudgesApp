@@ -27,7 +27,7 @@ class ViewControllerOneReview: UIViewController {
                             }
                         }
         
-                        discriptionOutlet.text = AppData.sortedDescription[AppData.index]
+                        discriptionOutlet.text = "Review discription:  \(AppData.sortedDescription[AppData.index])"
                     }
         
         // Do any additional setup after loading the view.
