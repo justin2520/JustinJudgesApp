@@ -13,6 +13,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBAction func addCatagoryAction(_ sender: UIButton) {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
