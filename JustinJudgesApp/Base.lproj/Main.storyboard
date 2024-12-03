@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-og-Wld">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-og-Wld">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5AF-FD-dpZ">
@@ -74,8 +74,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bw0-KE-hT4">
-                                        <rect key="frame" x="0.0" y="34.333333333333314" width="393" height="715"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bw0-KE-hT4">
+                                        <rect key="frame" x="0.0" y="34.333333333333371" width="393" height="715"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" textLabel="a3B-Qq-R9k" style="IBUITableViewCellStyleDefault" id="cYf-lN-FB8">
@@ -98,15 +98,16 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Bw0-KE-hT4" secondAttribute="bottom" id="BfC-N7-k2I"/>
-                                    <constraint firstItem="Bw0-KE-hT4" firstAttribute="leading" secondItem="GqQ-og-Wld" secondAttribute="leading" id="J5b-Ux-UhU"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bw0-KE-hT4" secondAttribute="trailing" id="vcH-tg-1R6"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DrX-h5-QPH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GqQ-og-Wld" firstAttribute="top" secondItem="DrX-h5-QPH" secondAttribute="top" id="7vE-gG-roS"/>
+                            <constraint firstItem="GqQ-og-Wld" firstAttribute="leading" secondItem="DrX-h5-QPH" secondAttribute="leading" id="GWn-0A-AZo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GqQ-og-Wld" secondAttribute="bottom" constant="-34.333333333333371" id="MJr-aN-JP8"/>
+                            <constraint firstItem="GqQ-og-Wld" firstAttribute="centerX" secondItem="w0a-AX-T8z" secondAttribute="centerX" id="ThZ-f9-Ueo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UNE-wZ-cyJ"/>
                     <connections>
