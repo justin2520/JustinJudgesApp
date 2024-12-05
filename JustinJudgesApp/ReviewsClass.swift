@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum Rating: Int{
+enum Rating: Int, Codable{
     case Zero = 0, One, Two, Three, Four, Five
 }
 
-class Reviews{
+class Reviews: Codable{
     var type: String
     var name: String
     var description: String
