@@ -3,7 +3,7 @@
 //  JustinJudgesApp
 //
 //  Created by JUSTIN WEBER on 10/30/24.
-//
+//Hi!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Hi Justin :)
 // Hello Peter Kickle :[
 // Lemons are the best fruit
@@ -19,6 +19,10 @@ class AppData{
     static var sortedName = [String]()
     static var sortedReview = [Rating]()
     static var sortedDescription = [String]()
+    
+    
+    
+    
 }
 
 class ViewController: UIViewController {
