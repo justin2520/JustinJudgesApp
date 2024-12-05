@@ -33,6 +33,10 @@ class AddReviewViewController: UIViewController {
             AppData.sortedReview = []
             AppData.sortedDescription = []
         
+        if let reviewEncode = try? AppData.encoder.encode(AppData.reviews){
+            AppData.defaults.set(reviewEncode, forKey: "reviews")
+        }
+        
         self.navigationController?.popViewController(animated: true)
         
     }

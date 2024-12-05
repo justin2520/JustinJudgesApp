@@ -20,9 +20,16 @@ class AppData{
     static var sortedReview = [Rating]()
     static var sortedDescription = [String]()
     
+<<<<<<< HEAD
     
     
     
+=======
+    static var defaults = UserDefaults.standard
+    
+    static var encoder = JSONEncoder()
+    static var decoder = JSONDecoder()
+>>>>>>> main
 }
 
 class ViewController: UIViewController {
@@ -30,6 +37,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        if let reviews = AppData.defaults.data(forKey: "reviews"){
+            if let reviewDecode = try? AppData.decoder.decode([Reviews].self, from: reviews){
+                if(reviewDecode.count == 0){
+                    AppData.reviews = []
+                }
+                else{
+                    AppData.reviews = reviewDecode
+                }
+            }
+        }
     }
 
     

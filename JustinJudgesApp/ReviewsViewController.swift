@@ -36,6 +36,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             AppData.sortedReview.append(review.rating)
             
             AppData.sortedDescription.append(review.description)
+            
         }
         
         cell.reviewLabelOutlet.text = AppData.sortedName[indexPath.row]
