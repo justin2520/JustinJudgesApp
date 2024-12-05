@@ -50,6 +50,12 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    
+    @IBAction func SortAction(_ sender: Any) {
+        AppData.sortReviews(sortMethod: "Increacing")
+        ratingsTableViewOutlet.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.index = indexPath.row
         performSegue(withIdentifier: "reviewSegue", sender: self)
