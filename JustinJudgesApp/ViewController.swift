@@ -19,6 +19,7 @@ class AppData{
     static var sortedName = [String]()
     static var sortedReview = [Rating]()
     static var sortedDescription = [String]()
+    static var reviewsForCatagory = [Reviews]()
     
     
     static var defaults = UserDefaults.standard
@@ -26,12 +27,7 @@ class AppData{
     static var encoder = JSONEncoder()
     static var decoder = JSONDecoder()
     
-    static func sortReviews(sortMethod: String){
-        if sortMethod == "Increacing"{
-            AppData.reviews.sort(by: { $0.rating.rawValue > $1.rating.rawValue })
-        } else if sortMethod == "Decreacing"{
-            AppData.reviews.sort(by: { $0.rating.rawValue < $1.rating.rawValue })
-        }
+
         
         
     }
@@ -61,4 +57,4 @@ class AppData{
         
         
     }
-}
+

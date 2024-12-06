@@ -31,6 +31,9 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! ReviewsCell
         
         for review in AppData.reviews where review.type == AppData.category{
+            
+            AppData.reviewsForCatagory.append(review)
+            
             AppData.sortedName.append(review.name)
                 
             AppData.sortedReview.append(review.rating)
@@ -52,9 +55,15 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func SortAction(_ sender: Any) {
-        AppData.sortReviews(sortMethod: "Increacing")
-        ratingsTableViewOutlet.reloadData()
+        
+        AppData.reviewsForCatagory.sort { $0.rating < $1.rating }
+    ratingsTableViewOutlet.reloadData()
+        
+
     }
+               
+            
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.index = indexPath.row
