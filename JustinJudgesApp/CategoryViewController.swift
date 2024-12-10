@@ -43,6 +43,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         AppData.sortedName = []
         AppData.sortedReview = []
         AppData.sortedDescription = []
+        AppData.reviewsForCatagory = []
     }
     
     @IBOutlet weak var categoryTableViewOutlet: UITableView!

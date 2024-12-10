@@ -32,6 +32,7 @@ class AddReviewViewController: UIViewController {
             AppData.sortedName = []
             AppData.sortedReview = []
             AppData.sortedDescription = []
+            AppData.reviewsForCatagory = []
         
         if let reviewEncode = try? AppData.encoder.encode(AppData.reviews){
             AppData.defaults.set(reviewEncode, forKey: "reviews")
