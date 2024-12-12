@@ -22,6 +22,25 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                for i in 0...AppData.reviews.count{
+                    if AppData.reviews[i].equals(otherReview: AppData.sortedReviews[indexPath.row]){
+                        AppData.reviews.remove(at: i)
+                        
+                        break
+                    }
+                }
+                
+                AppData.sortedReviews.remove(at: indexPath.row)
+                
+                
+            
+                
+                tableView.deleteRows(at: [indexPath], with: .right)
+            }
+        }
+        
         return count
     }
     
@@ -29,18 +48,14 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! ReviewsCell
         
         for review in AppData.reviews where review.type == AppData.category{
-            AppData.sortedName.append(review.name)
-                
-            AppData.sortedReview.append(review.rating)
-            
-            AppData.sortedDescription.append(review.description)
-            
+            AppData.sortedReviews.append(Reviews(type: review.type, name: review.name, description: review.description, rating: review.rating.rawValue))
+
         }
         
-        cell.reviewLabelOutlet.text = AppData.sortedName[indexPath.row]
+        cell.reviewLabelOutlet.text = AppData.reviews[indexPath.row].name
         
-        if AppData.sortedReview[indexPath.row].rawValue != 0{
-            for i in 0...AppData.sortedReview[indexPath.row].rawValue - 1{
+        if AppData.sortedReviews[indexPath.row].rating.rawValue != 0{
+            for i in 0...AppData.sortedReviews[indexPath.row].rating.rawValue - 1{
                 cell.reviewSegmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
             }
         }
@@ -61,6 +76,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
         ratingsTableViewOutlet.delegate = self
         ratingsTableViewOutlet.dataSource = self
+        AppData.sortedReviews = []
     }
     
     @IBAction func addReviewButtonAction(_ sender: UIButton) {

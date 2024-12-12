@@ -265,16 +265,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-pQ-GoM">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-pQ-GoM">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-Il-kgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="521.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="178.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ifk-zP-lg1">
-                                        <rect key="frame" x="0.0" y="521.66666666666663" width="393" height="32"/>
+                                        <rect key="frame" x="0.0" y="178.66666666666669" width="393" height="180"/>
                                         <segments>
                                             <segment title="Zero &gt;:("/>
                                             <segment title="" image="star" catalog="system"/>
@@ -287,15 +287,13 @@
                                             <action selector="valueChanged:" destination="FWs-W0-DhT" eventType="valueChanged" id="RxV-ci-EcA"/>
                                         </connections>
                                     </segmentedControl>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t2t-De-CEn">
-                                        <rect key="frame" x="0.0" y="552.66666666666663" width="393" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csV-qC-6RS">
+                                        <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="178.66666666666669"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvJ-gl-hbP">
-                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="536.33333333333337" width="393" height="178.66666666666663"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                         <connections>
@@ -308,15 +306,15 @@
                         <viewLayoutGuide key="safeArea" id="IhG-wE-oFT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yRY-pQ-GoM" firstAttribute="leading" secondItem="IhG-wE-oFT" secondAttribute="leading" id="21W-1d-LN0"/>
-                            <constraint firstItem="IhG-wE-oFT" firstAttribute="bottom" secondItem="yRY-pQ-GoM" secondAttribute="bottom" id="3ik-Aj-N6N"/>
-                            <constraint firstItem="yRY-pQ-GoM" firstAttribute="top" secondItem="IhG-wE-oFT" secondAttribute="top" id="RcE-IQ-VP4"/>
-                            <constraint firstItem="IhG-wE-oFT" firstAttribute="trailing" secondItem="yRY-pQ-GoM" secondAttribute="trailing" id="nQD-am-Pc1"/>
+                            <constraint firstItem="yRY-pQ-GoM" firstAttribute="leading" secondItem="IhG-wE-oFT" secondAttribute="leading" id="90y-9N-8Jp"/>
+                            <constraint firstItem="IhG-wE-oFT" firstAttribute="bottom" secondItem="yRY-pQ-GoM" secondAttribute="bottom" id="MkC-z9-Y0z"/>
+                            <constraint firstAttribute="trailing" secondItem="yRY-pQ-GoM" secondAttribute="trailing" id="n5c-Qm-rNe"/>
+                            <constraint firstItem="yRY-pQ-GoM" firstAttribute="top" secondItem="IhG-wE-oFT" secondAttribute="top" id="sFa-d7-YRC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LLF-iE-zlo"/>
                     <connections>
-                        <outlet property="descriptionTextViewOutlet" destination="t2t-De-CEn" id="fqJ-dI-ZSS"/>
+                        <outlet property="enterDescriptionTextFieldOutlet" destination="csV-qC-6RS" id="evx-uL-L5n"/>
                         <outlet property="nameTextFieldOutlet" destination="1SH-Il-kgd" id="qwn-Ap-wwz"/>
                         <outlet property="ratingSegmentedControlOutlet" destination="Ifk-zP-lg1" id="M7t-tc-JjU"/>
                     </connections>

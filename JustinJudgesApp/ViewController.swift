@@ -15,10 +15,12 @@ import UIKit
 class AppData{
     static var category = ""
     static var reviews = [Reviews]()
+    static var sortedReviews = [Reviews]()
     static var index = 0
-    static var sortedName = [String]()
-    static var sortedReview = [Rating]()
-    static var sortedDescription = [String]()
+    
+//    static var sortedName = [String]()
+//    static var sortedReview = [Rating]()
+//    static var sortedDescription = [String]()
     
     static var defaults = UserDefaults.standard
     
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+//        AppData.defaults.set([], forKey: "reviews")
         
         if let reviews = AppData.defaults.data(forKey: "reviews"){
             if let reviewDecode = try? AppData.decoder.decode([Reviews].self, from: reviews){

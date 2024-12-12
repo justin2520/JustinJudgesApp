@@ -13,7 +13,8 @@ class AddReviewViewController: UIViewController {
     
     @IBOutlet weak var ratingSegmentedControlOutlet: UISegmentedControl!
     
-    @IBOutlet weak var descriptionTextViewOutlet: UITextView!
+    @IBOutlet weak var enterDescriptionTextFieldOutlet: UITextField!
+    
     
     
     
@@ -27,11 +28,13 @@ class AddReviewViewController: UIViewController {
         
         
         
-        AppData.reviews.append(Reviews(type: AppData.category, name: nameTextFieldOutlet.text!, description: descriptionTextViewOutlet.text!, rating: ratingSegmentedControlOutlet.selectedSegmentIndex))
+        AppData.reviews.append(Reviews(type: AppData.category, name: nameTextFieldOutlet.text!, description: enterDescriptionTextFieldOutlet.text!, rating: ratingSegmentedControlOutlet.selectedSegmentIndex))
         
-            AppData.sortedName = []
-            AppData.sortedReview = []
-            AppData.sortedDescription = []
+       
+        
+//            AppData.sortedName = []
+//            AppData.sortedReview = []
+//            AppData.sortedDescription = []
         
         if let reviewEncode = try? AppData.encoder.encode(AppData.reviews){
             AppData.defaults.set(reviewEncode, forKey: "reviews")

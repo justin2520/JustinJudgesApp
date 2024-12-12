@@ -9,6 +9,9 @@ import UIKit
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var categories = ["Schools", "Restaurants", "People", "Video Games", "Movies", "Books"]
+    
+    
     @IBOutlet weak var catagoryOutlet: UITextField!
     
     
@@ -40,14 +43,13 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         performSegue(withIdentifier: "reviewsSegue", sender: nil)
         
-        AppData.sortedName = []
-        AppData.sortedReview = []
-        AppData.sortedDescription = []
+//        AppData.sortedName = []
+//        AppData.sortedReview = []
+//        AppData.sortedDescription = []
     }
+
     
     @IBOutlet weak var categoryTableViewOutlet: UITableView!
-    
-    var categories = ["Schools", "Restaurants", "People", "Video Games", "Movies", "Books"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
