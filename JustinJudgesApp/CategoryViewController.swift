@@ -43,9 +43,10 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         performSegue(withIdentifier: "reviewsSegue", sender: nil)
         
-//        AppData.sortedName = []
-//        AppData.sortedReview = []
-//        AppData.sortedDescription = []
+        AppData.sortedName = []
+        AppData.sortedReview = []
+        AppData.sortedDescription = []
+        AppData.reviewsForCatagory = []
     }
 
     

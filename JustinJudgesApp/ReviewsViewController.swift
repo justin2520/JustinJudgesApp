@@ -16,10 +16,8 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
         
-        for review in AppData.reviews {
-            if review.type == AppData.category{
+        for _ in AppData.reviewsForCatagory {
                 count += 1
-            }
         }
         
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -44,24 +42,41 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! ReviewsCell
+       
+        cell.reviewLabelOutlet.text = AppData.reviewsForCatagory[indexPath.row].name
         
-        for review in AppData.reviews where review.type == AppData.category{
-            AppData.sortedReviews.append(Reviews(type: review.type, name: review.name, description: review.description, rating: review.rating.rawValue))
-
+        for i in 0...4{
+            cell.reviewSegmentedControlOutlet.setImage(UIImage(systemName: "star"), forSegmentAt: i)
         }
-        
-        cell.reviewLabelOutlet.text = AppData.reviews[indexPath.row].name
-        
-        if AppData.sortedReviews[indexPath.row].rating.rawValue != 0{
-            for i in 0...AppData.sortedReviews[indexPath.row].rating.rawValue - 1{
+        if AppData.reviewsForCatagory[indexPath.row].rating.rawValue != 0{
+            for i in 0...AppData.reviewsForCatagory[indexPath.row].rating.rawValue - 1{
                 cell.reviewSegmentedControlOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
             }
         }
         
         return cell
     }
+    
+    
+    var sortMethod = ""
+    
+    @IBAction func SortAction(_ sender: Any) {
+        
+        
+        
+        AppData.reviewsForCatagory.sort { $0.rating > $1.rating }
+    ratingsTableViewOutlet.reloadData()
+        
+
+    }
+               
+            
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.index = indexPath.row
@@ -72,7 +87,21 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var count = -1
+        for review in AppData.reviews where review.type == AppData.category{
+            count += 1
+            
+            
+            AppData.sortedName.append(review.name)
+                
+            AppData.sortedReview.append(review.rating)
+            
+            AppData.sortedDescription.append(review.description)
+            
+            AppData.reviewsForCatagory.append(Reviews(type: AppData.category, name: AppData.sortedName[count], description: AppData.sortedDescription[count], rating: AppData.sortedReview[count].rawValue))
+            
+        }
+        
         // Do any additional setup after loading the view.
         ratingsTableViewOutlet.delegate = self
         ratingsTableViewOutlet.dataSource = self

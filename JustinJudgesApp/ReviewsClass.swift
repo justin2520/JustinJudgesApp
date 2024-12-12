@@ -7,8 +7,40 @@
 
 import Foundation
 
-enum Rating: Int, Codable{
+enum Rating: Int, Codable, Comparable{
     case Zero = 0, One, Two, Three, Four, Five
+    
+    private var sortOrder: Int {
+            switch self {
+            case .Zero:
+                return 0
+                
+            case .One:
+                return 1
+                
+            case .Two:
+                return 2
+                
+            case .Three:
+                return 3
+                
+            case .Four:
+                return 4
+                
+            case .Five:
+                return 5
+                
+            }
+        }
+    
+    static func ==(lhs: Rating, rhs: Rating) -> Bool {
+            return lhs.sortOrder == rhs.sortOrder
+        }
+    
+    static func <(lhs: Rating, rhs: Rating) -> Bool {
+       return lhs.sortOrder < rhs.sortOrder
+    }
+    
 }
 
 class Reviews: Codable{
