@@ -44,6 +44,19 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+
+    @IBOutlet weak var popupButtonOutlet: UIButton!
+    
+    
+    func setPopupButton(){
+        
+        let optionClosure = {(action: UIAction) in print(action.title)}
+        
+        popupButtonOutlet.menu = UIMenu(children :[
+            UIAction(title : "ascending", state : .on, handler: optionClosure)
+        ])
+    }
+    
     var sortMethod = ""
     
     @IBAction func SortAction(_ sender: Any) {

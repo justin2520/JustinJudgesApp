@@ -23,16 +23,20 @@ class AddReviewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewIsAppearing(_ animated: Bool) {
+        AppData.sortedName = []
+        AppData.sortedReview = []
+        AppData.sortedDescription = []
+        AppData.reviewsForCatagory = []
+    }
+    
     @IBAction func submitButtonAction(_ sender: UIButton) {
         
         
         
         AppData.reviews.append(Reviews(type: AppData.category, name: nameTextFieldOutlet.text!, description: descriptionTextViewOutlet.text!, rating: ratingSegmentedControlOutlet.selectedSegmentIndex))
         
-            AppData.sortedName = []
-            AppData.sortedReview = []
-            AppData.sortedDescription = []
-            AppData.reviewsForCatagory = []
+   
         
         if let reviewEncode = try? AppData.encoder.encode(AppData.reviews){
             AppData.defaults.set(reviewEncode, forKey: "reviews")

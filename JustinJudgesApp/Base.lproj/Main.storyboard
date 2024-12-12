@@ -143,12 +143,12 @@
                                                     <action selector="SortAction:" destination="l4V-Bg-MIB" eventType="touchUpInside" id="AFV-Ah-AVy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lug-o9-zL5">
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lug-o9-zL5">
                                                 <rect key="frame" x="209" y="0.0" width="184" height="34.333333333333336"/>
                                                 <menu key="menu" id="iQN-Bb-4fh">
                                                     <children>
-                                                        <command title="Item 1" id="rnk-3a-jsz"/>
-                                                        <command title="Item 2" id="5ri-8y-8CV"/>
+                                                        <command title="Ascending" id="rnk-3a-jsz"/>
+                                                        <command title="Decending" id="5ri-8y-8CV"/>
                                                     </children>
                                                 </menu>
                                                 <state key="normal" title="Button"/>
@@ -217,6 +217,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h6E-sj-bYv"/>
                     <connections>
+                        <outlet property="popupButtonOutlet" destination="Lug-o9-zL5" id="YcX-x7-EVQ"/>
                         <outlet property="ratingsTableViewOutlet" destination="abp-z5-Xgx" id="NtY-He-dei"/>
                         <segue destination="m7I-Al-s8K" kind="show" identifier="reviewSegue" id="Jnw-nR-PBX"/>
                     </connections>
