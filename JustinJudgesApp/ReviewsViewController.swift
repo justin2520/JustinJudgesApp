@@ -68,6 +68,10 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        }
+    
+    override func viewIsAppearing(_ animated: Bool) {
         var count = -1
         for review in AppData.reviews where review.type == AppData.category{
             count += 1
@@ -81,7 +85,8 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             AppData.reviewsForCatagory.append(Reviews(type: AppData.category, name: AppData.sortedName[count], description: AppData.sortedDescription[count], rating: AppData.sortedReview[count].rawValue))
             
-        }
+            ratingsTableViewOutlet.reloadData()
+    }
         
         // Do any additional setup after loading the view.
         ratingsTableViewOutlet.delegate = self
