@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37D5096A2CF60BC2002D30E1 /* ViewControllerOneReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D509692CF60BC2002D30E1 /* ViewControllerOneReview.swift */; };
-		EE2BBA532CE30D8600D340AA /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2BBA522CE30D8600D340AA /* ReviewViewController.swift */; };
-		EE5E2C9A2CD9CF550073EF20 /* reviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E2C992CD9CF550073EF20 /* reviewsCell.swift */; };
+		EE5E2C9A2CD9CF550073EF20 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E2C992CD9CF550073EF20 /* ReviewsCell.swift */; };
 		EEFA3F5A2CD2639700A5C7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA3F592CD2639700A5C7C0 /* AppDelegate.swift */; };
 		EEFA3F5C2CD2639700A5C7C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA3F5B2CD2639700A5C7C0 /* SceneDelegate.swift */; };
 		EEFA3F5E2CD2639700A5C7C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA3F5D2CD2639700A5C7C0 /* ViewController.swift */; };
@@ -24,8 +23,7 @@
 
 /* Begin PBXFileReference section */
 		37D509692CF60BC2002D30E1 /* ViewControllerOneReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOneReview.swift; sourceTree = "<group>"; };
-		EE2BBA522CE30D8600D340AA /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
-		EE5E2C992CD9CF550073EF20 /* reviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewsCell.swift; sourceTree = "<group>"; };
+		EE5E2C992CD9CF550073EF20 /* ReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
 		EEFA3F562CD2639700A5C7C0 /* JustinJudgesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustinJudgesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFA3F592CD2639700A5C7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEFA3F5B2CD2639700A5C7C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 		EEFA3F4D2CD2639700A5C7C0 = {
 			isa = PBXGroup;
 			children = (
-				37D509692CF60BC2002D30E1 /* ViewControllerOneReview.swift */,
 				EEFA3F582CD2639700A5C7C0 /* JustinJudgesApp */,
 				EEFA3F572CD2639700A5C7C0 /* Products */,
 			);
@@ -76,10 +73,10 @@
 				EEFA3F5D2CD2639700A5C7C0 /* ViewController.swift */,
 				EEFA3F6D2CD3B77400A5C7C0 /* CategoryViewController.swift */,
 				EEFA3F712CD8F35900A5C7C0 /* ReviewsViewController.swift */,
-				EE2BBA522CE30D8600D340AA /* ReviewViewController.swift */,
+				37D509692CF60BC2002D30E1 /* ViewControllerOneReview.swift */,
 				EEFA3F752CD9C8B500A5C7C0 /* AddReviewViewController.swift */,
 				EEFA3F732CD8F3B200A5C7C0 /* ReviewsClass.swift */,
-				EE5E2C992CD9CF550073EF20 /* reviewsCell.swift */,
+				EE5E2C992CD9CF550073EF20 /* ReviewsCell.swift */,
 				EEFA3F5F2CD2639700A5C7C0 /* Main.storyboard */,
 				EEFA3F622CD2639900A5C7C0 /* Assets.xcassets */,
 				EEFA3F642CD2639900A5C7C0 /* LaunchScreen.storyboard */,
@@ -160,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFA3F742CD8F3B200A5C7C0 /* ReviewsClass.swift in Sources */,
-				EE5E2C9A2CD9CF550073EF20 /* reviewsCell.swift in Sources */,
+				EE5E2C9A2CD9CF550073EF20 /* ReviewsCell.swift in Sources */,
 				EEFA3F6E2CD3B77400A5C7C0 /* CategoryViewController.swift in Sources */,
 				EEFA3F5E2CD2639700A5C7C0 /* ViewController.swift in Sources */,
 				EEFA3F5A2CD2639700A5C7C0 /* AppDelegate.swift in Sources */,
@@ -168,7 +165,6 @@
 				EEFA3F722CD8F35900A5C7C0 /* ReviewsViewController.swift in Sources */,
 				37D5096A2CF60BC2002D30E1 /* ViewControllerOneReview.swift in Sources */,
 				EEFA3F762CD9C8B500A5C7C0 /* AddReviewViewController.swift in Sources */,
-				EE2BBA532CE30D8600D340AA /* ReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

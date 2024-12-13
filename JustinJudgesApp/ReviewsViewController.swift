@@ -23,6 +23,25 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 count += 1
         }
         
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                for i in 0...AppData.reviews.count{
+                    if AppData.reviews[i].equals(otherReview: AppData.sortedReviews[indexPath.row]){
+                        AppData.reviews.remove(at: i)
+                        
+                        break
+                    }
+                }
+                
+                AppData.sortedReviews.remove(at: indexPath.row)
+                
+                
+            
+                
+                tableView.deleteRows(at: [indexPath], with: .right)
+            }
+        }
+        
         return count
     }
     
@@ -129,7 +148,11 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
        
         ratingsTableViewOutlet.delegate = self
         ratingsTableViewOutlet.dataSource = self
+<<<<<<< HEAD
         ratingsTableViewOutlet.reloadData()
+=======
+        AppData.sortedReviews = []
+>>>>>>> main
     }
     
     @IBAction func addReviewButtonAction(_ sender: UIButton) {

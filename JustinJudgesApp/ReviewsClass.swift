@@ -77,4 +77,11 @@ class Reviews: Codable{
             self.rating = .Zero
         }
     }
+    
+    func equals(otherReview: Reviews) -> Bool{
+        if type == otherReview.type && name == otherReview.name && description == otherReview.description && rating == otherReview.rating{
+            return true
+        }
+        return false
+    }
 }
