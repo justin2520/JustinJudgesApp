@@ -1,5 +1,5 @@
 //
-//  reviewsCell.swift
+//  ReviewsCell.swift
 //  JustinJudgesApp
 //
 //  Created by JUSTIN WEBER on 11/4/24.
