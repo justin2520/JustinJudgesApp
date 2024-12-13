@@ -153,6 +153,9 @@
                                                 </menu>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Sort type ↓"/>
+                                                <connections>
+                                                    <action selector="popupButtonAction:" destination="l4V-Bg-MIB" eventType="valueChanged" id="Nk8-cA-a7A"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
