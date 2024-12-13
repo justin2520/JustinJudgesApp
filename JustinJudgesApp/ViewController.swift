@@ -21,6 +21,7 @@ class AppData{
     static var sortedReview = [Rating]()
     static var sortedDescription = [String]()
     static var reviewsForCatagory = [Reviews]()
+    static var categories = ["Schools", "Restaurants", "People", "Video Games", "Movies", "Books"]
     
 //    static var sortedName = [String]()
 //    static var sortedReview = [Rating]()
@@ -42,6 +43,9 @@ class AppData{
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             
+            if let categories = AppData.defaults.array(forKey: "categories"){
+                AppData.categories = categories as! [String]
+            }
             
             if let reviews = AppData.defaults.data(forKey: "reviews"){
                 if let reviewDecode = try? AppData.decoder.decode([Reviews].self, from: reviews){

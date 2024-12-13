@@ -9,37 +9,36 @@ import UIKit
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var categories = ["Schools", "Restaurants", "People", "Video Games", "Movies", "Books"]
-    
-    
     @IBOutlet weak var catagoryOutlet: UITextField!
     
     
     @IBAction func addCatagoryAction(_ sender: UIButton) {
         if catagoryOutlet.text != "", let newCat : String  = catagoryOutlet.text{
-            categories.append(newCat)
+            AppData.categories.append(newCat)
             catagoryOutlet.text = ""
             categoryTableViewOutlet.reloadData()
             catagoryOutlet.placeholder = "Add Catagory Name..."
         }else{
             catagoryOutlet.placeholder = "enter something!"
         }
+        
+        AppData.defaults.set(AppData.categories, forKey: "categories")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return AppData.categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
         
-        cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.text = AppData.categories[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppData.category = categories[indexPath.row]
+        AppData.category = AppData.categories[indexPath.row]
         
         performSegue(withIdentifier: "reviewsSegue", sender: nil)
         
