@@ -43,6 +43,8 @@ class AppData{
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             
+//            AppData.defaults.set([], forKey: "reviews")
+            
             if let categories = AppData.defaults.array(forKey: "categories"){
                 AppData.categories = categories as! [String]
             }

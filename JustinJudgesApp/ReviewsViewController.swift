@@ -148,11 +148,11 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
        
         ratingsTableViewOutlet.delegate = self
         ratingsTableViewOutlet.dataSource = self
-<<<<<<< HEAD
+
         ratingsTableViewOutlet.reloadData()
-=======
+
         AppData.sortedReviews = []
->>>>>>> main
+
     }
     
     @IBAction func addReviewButtonAction(_ sender: UIButton) {

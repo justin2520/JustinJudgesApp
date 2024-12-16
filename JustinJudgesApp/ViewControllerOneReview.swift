@@ -19,18 +19,24 @@ class ViewControllerOneReview: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LabelOutlet.text = AppData.sortedReviews[AppData.index].name
+        LabelOutlet.text = AppData.reviewsForCatagory[AppData.index].name
         
-        if AppData.sortedReviews[AppData.index].rating.rawValue != 0{
-            for i in 0...AppData.sortedReviews[AppData.index].rating.rawValue - 1{
+        if AppData.reviewsForCatagory[AppData.index].rating.rawValue != 0{
+            for i in 0...AppData.reviewsForCatagory[AppData.index].rating.rawValue - 1{
                                 reviewOutlet.setImage(UIImage(systemName: "star.fill"), forSegmentAt: i)
                             }
                         }
         
-        discriptionOutlet.text = "Review discription:  \(AppData.sortedReviews[AppData.index].description)"
+        discriptionOutlet.text = "Review discription:  \(AppData.reviewsForCatagory[AppData.index].description)"
+        
+        
+        AppData.reviewsForCatagory = []
                     }
         
         // Do any additional setup after loading the view.
+    
+ 
+    
     }
     
 
